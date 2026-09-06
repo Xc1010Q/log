@@ -1,0 +1,6 @@
+dmc.log_file_cycles = 10
+dmc.log_file_maxsize = 102400
+dmc.log_file_path = "/ota_update/ota_master/log/"
+dmc.log_file_full_name = "./logs/app.log"
+dmc.log_type = "all"
+dmc.log_level = "info"
