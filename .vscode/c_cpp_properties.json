@@ -1,0 +1,24 @@
+// C/C++ 扩展的配置文件。告诉 VSCode：头文件路径、编译器版本、宏定义。
+// 解决`#include <xxx.h>`波浪线报错。**仅用于代码提示，不参与实际编译**
+{
+    "configurations": [
+        {
+            "name": "cppg++", // 配置名称，自定义，UI界面会显示该名字
+            "compilerPath": "C:/soft/GW/MinGW/bin/g++.exe", // GCC编译器路径，用于IntelliSense读取编译器内置宏
+            "cStandard": "c11", // C语言标准版本
+            "cppStandard": "c++11", // C++语言标准版本
+            "intelliSenseMode": "windows-gcc-x64", // 智能提示模式，arm gcc编译器选gcc‑arm
+            "includePath": [ // 头文件搜索路径，仅用于VSCode代码提示，不参与真实编译
+                "${workspaceFolder}/inc/**", // ${workspaceFolder}=项目根目录；**代表递归遍历所有子文件夹
+                "${workspaceFolder}/src/**"
+                // "${workspaceFolder}/drivers/**"
+            ],
+            "defines": [ // 预定义宏，和编译-D参数保持一致，消除条件编译灰色代码、波浪线
+                // "STM32F407xx",
+                // "__STM32__",
+                // "USE_HAL_DRIVER"
+            ]
+        }
+    ],
+    "version": 4 // 配置文件版本，固定写4，不要修改
+}

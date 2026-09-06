@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "调试log程序",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask": "build", // 调试前自动执行tasks的build编译任务，名字必须和tasks的label完全一致
+            "program": "${workspaceFolder}/build/log.exe", // 你的cmake输出exe路径
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/soft/GW/MinGW/bin/gdb.exe", // 你的gdb实际路径
+            "setupCommands": [
+                {
+                    "description": "gdb美化打印",
+                    "text": "-enable‑pretty‑printing on",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
+/////调试配置
