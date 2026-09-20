@@ -40,6 +40,9 @@ target_include_directories(log
 # 不用关心底层是pthread还是win32 thread，CMake自动适配平台
 target_link_libraries(log PRIVATE Threads::Threads)
 
+# 解决 MinGW "too many sections" 问题
+target_compile_options(log PRIVATE -O1 -fno-inline -flto)
+target_link_options(log PRIVATE -flto=8)
 # 给log目标单独指定编译特性C++11；
 # 这里属于重复设置，前面已经全局 CMAKE_CXX_STANDARD 11；
 # 好处：就算全局标准被覆盖，该目标依然强制C++11

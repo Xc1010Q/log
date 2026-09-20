@@ -1,0 +1,21 @@
+{
+  "dmc": {
+    "log_file_cycles": 10,
+    "log_file_maxsize": 102400,
+    "log_file_path": "/ota_update/ota_master/log/",
+    "log_file_full_name": "./logs/app.log",
+    "log_type": "all",
+    "log_level": "info"
+  },
+  "test": {
+    "log_file_cycles": 10,
+    "log_file_maxsize": 102400,
+    "log_file_path": "/ota_update/ota_master/log/",
+    "log_file_full_name":[
+         "./logs/app.log",
+         "./logs/test.log"
+    ],
+    "log_type": "all",
+    "log_level": "error"
+  }
+}
